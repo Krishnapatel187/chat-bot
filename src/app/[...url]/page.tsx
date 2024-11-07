@@ -3,7 +3,7 @@ import { redis } from '@/lib/radis';
 import React from 'react'
 import ChatWrapper from '@/components/ChatWrapper';
 import { cookies } from 'next/headers';
-import { getBotNameForSession } from '@/lib/botName';
+import { getBotNameForSession } from '@/lib/botName'; 
 
 interface PageProps {
     params: {
@@ -43,7 +43,7 @@ const page = async ({ params }: PageProps) => {
     // Fetch the bot name using the sessionId
     const bot_Name = await getBotNameForSession(sessionId);
     const botName = bot_Name || "Bot";
-console.log("botName from page.tsx " + botName)
+// console.log("botName from page.tsx " + botName)
   
 if (!isAlreadyIndexed) {
         await ragChat.context.add({
