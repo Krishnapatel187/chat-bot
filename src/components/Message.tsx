@@ -10,6 +10,7 @@ interface MessageProps {
 
 
 export const Message = ({ content, isUserMessage, botName }: MessageProps) => {
+
     return (
         <div className={cn({
             "bg-zinc-800": isUserMessage,
